@@ -1,10 +1,10 @@
 ---
 name: Improvement request
-about: Task to improve the application
-title: ''
+about: Suggest an improvment for this project
+title: "[IMPROVEMENT]"
 labels: enhancement
-assignees: JiLaRiAtIoN
+assignees: romankh3
 
 ---
 
-
+** Describe your idea of the improvement **

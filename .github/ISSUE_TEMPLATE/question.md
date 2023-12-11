@@ -1,9 +1,9 @@
 ---
 name: Question
-about: Question for the developers about the application
-title: ''
-labels: question
-assignees: JiLaRiAtIoN
+about: ask any questions, which are interested you
+title: "[QUESTION]"
+labels: 'question'
+assignees: romankh3
 
 ---
 
