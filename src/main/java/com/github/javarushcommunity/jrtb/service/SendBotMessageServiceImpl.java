@@ -12,11 +12,11 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 @Service
 public class SendBotMessageServiceImpl implements SendBotMessageService {
 
-    private final JavarushTelegramBot javarushTelegramBot;
+    private final JavarushTelegramBot javarushBot;
 
     @Autowired
-    public SendBotMessageServiceImpl(JavarushTelegramBot javarushTelegramBot) {
-        this.javarushTelegramBot = javarushTelegramBot;
+    public SendBotMessageServiceImpl(JavarushTelegramBot javarushBot) {
+        this.javarushBot = javarushBot;
     }
 
     @Override
@@ -27,9 +27,10 @@ public class SendBotMessageServiceImpl implements SendBotMessageService {
         sendMessage.setText(message);
 
         try {
-            javarushTelegramBot.execute(sendMessage);
+            javarushBot.execute(sendMessage);
         } catch (TelegramApiException e) {
-            throw new RuntimeException(e);
+            //todo add logging to the project.
+            e.printStackTrace();
         }
     }
 }

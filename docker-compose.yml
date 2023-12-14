@@ -7,19 +7,19 @@ services:
     build:
       context: .
     environment:
-      BOT_NAME: ${BOT_NAME}
-      BOT_TOKEN: ${BOT_TOKEN}
-      BOT_DB_USERNAME: ${BOT_DB_USERNAME}
-      BOT_DB_PASSWORD: ${BOT_DB_PASSWORD}
+      BOT_NAME: javarush345_bot
+      BOT_TOKEN: 6860867353:AAFQIazb1GybHchPXr2cMOH_dpQqwEt4Bok
+      BOT_DB_USERNAME: postgres
+      BOT_DB_PASSWORD: postgres
     restart: always
   jrtb-db:
     image: postgres:15.2
     restart: always
     environment:
-      POSTGRES_USER: ${BOT_DB_USERNAME}
-      POSTGRES_PASSWORD: ${BOT_DB_PASSWORD}
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
       POSTGRES_DATABASE: 'dev_jrtb_db'
-      POSTGRES_ROOT_PASSWORD: 'postgres'
+      POSTGRES_ROOT_PASSWORD: 741852963qwe
     ports:
       - '5432:5432'
     expose:
