@@ -1,10 +1,26 @@
 version: '3.1'
 
 services:
-  jrtb:
+  jrtb-bot:
+    depends_on:
+      - jrtb-db
     build:
       context: .
     environment:
-      - BOT_NAME=${BOT_NAME}
-      - BOT_TOKEN=${BOT_TOKEN}
+      BOT_NAME: ${BOT_NAME}
+      BOT_TOKEN: ${BOT_TOKEN}
+      BOT_DB_USERNAME: ${BOT_DB_USERNAME}
+      BOT_DB_PASSWORD: ${BOT_DB_PASSWORD}
     restart: always
+  jrtb-db:
+    image: postgres:15.2
+    restart: always
+    environment:
+      POSTGRES_USER: ${BOT_DB_USERNAME}
+      POSTGRES_PASSWORD: ${BOT_DB_PASSWORD}
+      POSTGRES_DATABASE: 'dev_jrtb_db'
+      POSTGRES_ROOT_PASSWORD: 'postgres'
+    ports:
+      - '5432:5432'
+    expose:
+      - '5432'
