@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:latest
+        image: postgres:16-alpine3.19
         env:
           POSTGRES_DB: dev_jrtb_db
           POSTGRES_USER: postgres
