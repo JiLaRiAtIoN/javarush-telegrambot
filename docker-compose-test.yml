@@ -1,0 +1,14 @@
+version: "3.1"
+
+services:
+  jrtb-db:
+    container_name: dev-jrtb-db
+    image: postgres:16-alpine3.19
+    environment:
+      POSTGRES_DB: "dev_jrtb_db"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+    volumes:
+      - "./postgres_data:/var/lib/postgresql/date/"
+    ports:
+      - "5432:5432"
