@@ -6,7 +6,8 @@ import static com.github.javarushcommunity.jrtb.command.CommandName.NO;
 import static com.github.javarushcommunity.jrtb.command.NoCommand.NO_MESSAGE;
 
 @DisplayName("Unit-level testing for NoCommand")
-public class NoCommandTest extends AbstractCommandTest{
+public class NoCommandTest extends AbstractCommandTest {
+
     @Override
     String getCommandName() {
         return NO.getCommandName();

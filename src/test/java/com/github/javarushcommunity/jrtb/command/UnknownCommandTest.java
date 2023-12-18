@@ -1,11 +1,15 @@
 package com.github.javarushcommunity.jrtb.command;
 
+import org.junit.jupiter.api.DisplayName;
+
 import static com.github.javarushcommunity.jrtb.command.UnknownCommand.UNKNOWN_MESSAGE;
 
-public class UnknownCommandTest extends AbstractCommandTest{
+@DisplayName("Unit-level testing for UnknownCommand")
+public class UnknownCommandTest extends AbstractCommandTest {
+
     @Override
     String getCommandName() {
-        return "/fdgfsfgssg";
+        return "/fdgdfgdfgdbd";
     }
 
     @Override

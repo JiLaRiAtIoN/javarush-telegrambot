@@ -6,7 +6,8 @@ import static com.github.javarushcommunity.jrtb.command.CommandName.HELP;
 import static com.github.javarushcommunity.jrtb.command.HelpCommand.HELP_MESSAGE;
 
 @DisplayName("Unit-level testing for HelpCommand")
-public class HelpCommandTest extends AbstractCommandTest{
+public class HelpCommandTest extends AbstractCommandTest {
+
     @Override
     String getCommandName() {
         return HELP.getCommandName();
