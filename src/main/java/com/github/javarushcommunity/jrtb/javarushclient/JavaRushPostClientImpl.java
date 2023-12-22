@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class JavaRushPostClientImpl implements JavaRushPostClient{
+public class JavaRushPostClientImpl implements JavaRushPostClient {
 
     private final String javarushApiPostPath;
 
@@ -20,15 +20,15 @@ public class JavaRushPostClientImpl implements JavaRushPostClient{
 
     @Override
     public List<PostInfo> findNewPosts(Integer groupId, Integer lastPostId) {
-        List<PostInfo> lastPostByGroup = Unirest.get(javarushApiPostPath)
+        List<PostInfo> lastPostsByGroup = Unirest.get(javarushApiPostPath)
                 .queryString("order", "NEW")
                 .queryString("groupKid", groupId)
                 .queryString("limit", 15)
                 .asObject(new GenericType<List<PostInfo>>() {
                 }).getBody();
         List<PostInfo> newPosts = new ArrayList<>();
-        for(PostInfo post : lastPostByGroup) {
-            if(lastPostId.equals(post.getId())) {
+        for (PostInfo post : lastPostsByGroup) {
+            if (lastPostId.equals(post.getId())) {
                 return newPosts;
             }
             newPosts.add(post);
