@@ -8,6 +8,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import java.util.List;
 
+import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.springframework.util.CollectionUtils.isEmpty;
 
 /**
@@ -25,6 +26,8 @@ public class SendBotMessageServiceImpl implements SendBotMessageService {
 
     @Override
     public void sendMessage(String chatId, String message) {
+        if (isBlank(message)) return;
+
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.enableHtml(true);

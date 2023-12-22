@@ -13,9 +13,9 @@ public interface GroupSubService {
 
     GroupSub save(String chatId, GroupDiscussionInfo groupDiscussionInfo);
 
-    Optional<GroupSub> findById(Integer integer);
-
     GroupSub save(GroupSub groupSub);
+
+    Optional<GroupSub> findById(Integer id);
 
     List<GroupSub> findAll();
 }

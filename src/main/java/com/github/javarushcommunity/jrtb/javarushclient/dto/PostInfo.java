@@ -7,6 +7,7 @@ import lombok.Data;
  */
 @Data
 public class PostInfo {
+
     private BaseUserInfo authorInfo;
     private Integer commentsCount;
     private String content;
@@ -27,4 +28,5 @@ public class PostInfo {
     private UserDiscussionInfo userDiscussionInfo;
     private Integer views;
     private VisibilityStatus visibilityStatus;
+
 }
