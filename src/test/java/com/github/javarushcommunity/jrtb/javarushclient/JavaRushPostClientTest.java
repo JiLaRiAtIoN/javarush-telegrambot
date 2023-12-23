@@ -9,7 +9,6 @@ import java.util.List;
 
 import static com.github.javarushcommunity.jrtb.javarushclient.JavaRushGroupClientTest.JAVARUSH_API_PATH;
 
-
 @DisplayName("Integration-level testing for JavaRushPostClient")
 class JavaRushPostClientTest {
 

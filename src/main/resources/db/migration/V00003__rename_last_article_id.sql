@@ -1,0 +1,1 @@
+alter table group_sub rename column last_article_id to last_post_id;
